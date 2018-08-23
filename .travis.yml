@@ -29,7 +29,7 @@ cache:
 script:
 - "./gradlew assembleRelease"
 before_install:
-- openssl aes-256-cbc -K $encrypted_c1bc0e36afa7_key -iv $encrypted_c1bc0e36afa7_iv -in gnsstest.jks.enc -out gnsstest.jks -d
+- openssl aes-256-cbc -K $encrypted_1a17ea543043_key -iv $encrypted_1a17ea543043_iv -in gnsstest.jks.enc -out gnsstest.jks -d
 - yes | sdkmanager "platforms;android-28"
 - yes | sdkmanager "build-tools;27.0.3"
 - yes | sdkmanager "build-tools;28.0.2"
@@ -44,7 +44,8 @@ deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: OgqXs3M9aTxN2v+5YSLPvTRSLNPCaQ0TVDeVJxmCf0jU7gctOSmmRNE2pWnz7ozZVGDI89LxOmBzz9HaOnubZ8Fj9B2RKyGfN88KOE5WjAdNCgyXTY5VzPZ3yWlXOA7rQOLyKIJ1gCHxMaH2k3XiQ0CBuqj8ct+DUiG/0HWoV0s7iFvbpDT1H0aEV7eU/ghf10UardMGOtodpKtZyohpITlNG90RglBwX5dM1CUIxFTsR7lF957J/TDYAvVa+AlnuvD1DrAQXhURTH92af5VfGkZeEhDeuTsU6gGBdnHUoKEo0LKDL8Jez+aSskhSxJ2D17JMV8xFagxLUb6yFzpoersx3MQVwwtAKaQErcS00v9LbSoAxc1P8LSciFTIW6dht2MCBGpi7stDSbNLFQhxtVnODtqqOu6bLcZHa7Eoz9yjdkzcjb6sHgACXcuqGy9cwMlMZVOgwb5HbvP5E/W9qwl0szvKxbMyB5ri0/XGmXy40YLKWzX6aKq8Eliac/dumXuLA8pUUUy1LrBqN+/8k+uSVvyJwcv+kBxdpVlWf1PQaz6ZEg96N7czJxVuDQvS0JYcar5Uutr6ZcQHYSqyZBS+GV/OXuFn88pmUbzZx4WI8/K2WfHQ+s2MY4GEMKZ7MRF2nffxmpVWfHJdy3t2O7bRU/FOKPB+5XLnyxDg6U=
+    secure: RFvHWFuVJgEGLwMYc/a/fFnO8E0Ygr4sjpF0sX5rctXpCLzk/ByKPRquzBjCrnrRJVoDHxr/GGmSyy2aW8GJcZwSDp7zye6gVU6FAgMA3kX1FcNfdfdL1ib699AFkR8s2A5SYibu7ugqKlQM01eQjGdieyc8NxABeAx8P5CS2OPZBNSu2RlNZvDFUAIfO9xVocp9bzwPJCppBiAKAdHGwaExlOdO1HX48sO4NX9ik7ERhDaaNz7qtHMTluyN0b63St92MTW6BEaN1zvMMY0uTuSwDgkk7mQW9KMFJEvA/5SvZlKrU2YN2sd9kGv8xtaotl9Cour0Km8Nb4VqbGvqfpxXY3pIJOtsPmwwxxQGx/poG1m/rtHuxClrB3z06z5xva0QoopWpL04Zmmwf5qHvuoC7TOyVcTe9PIkUGp9zOPxFEYSYQEwxUtqH+yaiu688IcZx6wMBCsal3drbfIVQ6LXI/TRtIfmS1HDQs3zIL7BhYDp7wtz0u2u3q3r/X78s62ZGwODAKZGsq2Evtuey/A5mbjtLuDsC0x3O9H6kL6oHzIEk8iDbnYcfB1jPT7BGtU3VmLUKENqfJp0SSGC6wEYJipRP29zP3S+W7STy+hHug6ninZXWfZD8GjSTIet4nks9B3UwGHHcHAKq+JSpmFPZ/jlI3cbVcLbFLSJWV8=
   file: GNSSTest.apk
   on:
     tags: true
+
