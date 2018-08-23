@@ -1,0 +1,73 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="preference_keep_screen"
+        android:summary="@string/pref_description_keep_screen"
+        android:title="@string/pref_title_keep_screen" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:title="@string/pref_title_nmea_record"
+        android:summary="@string/pref_description_nmea_record"
+        android:key="preference_nmea_record" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:title="@string/pref_title_raw_record"
+        android:summary="@string/pref_description_raw_record"
+        android:key="preference_raw_record" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="preference_notifications"
+        android:summary="@string/pref_description_test_notifications"
+        android:title="@string/pref_title_test_notifications" />
+
+    <!-- Allows the user to choose a ringtone in the 'notification' category. -->
+    <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+    <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
+    <RingtonePreference
+        android:defaultValue="content://settings/system/notification_sound"
+        android:dependency="preference_notifications"
+        android:key="preference_notifications_ringtone"
+        android:ringtoneType="notification"
+        android:title="@string/pref_title_ringtone" />
+
+    <EditTextPreference
+        android:defaultValue="01"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/pref_description_device_name"
+        android:title="@string/pref_title_device_name"
+        android:key="preference_device_name" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="preference_hack_dual_frequency_support"
+        android:summary="@string/pref_description_hack_dual_frequency_support"
+        android:title="@string/pref_title_hack_dual_frequency_support" />
+
+    <EditTextPreference
+        android:defaultValue="RMC"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/pref_description_custom_nmea"
+        android:title="@string/pref_title_custom_nmea"
+        android:key="preference_custom_nmea_match" />
+
+    <EditTextPreference
+        android:defaultValue="2,3,5"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/pref_description_custom_nmea_display"
+        android:title="@string/pref_title_custom_nmea_display"
+        android:key="preference_custom_nmea_display" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="preference_gnss_test_profession_mode"
+        android:summary="@string/pref_description_gnss_test_profession_mode"
+        android:title="@string/pref_title_gnss_test_profession_mode" />
+
+</PreferenceScreen>

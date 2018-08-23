@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="built_in_test_job">
+        <item>Tracking</item>
+        <item>HotStarts</item>
+        <item>WarmStarts</item>
+        <item>ColdStarts</item>
+        <item>Customized</item>
+    </string-array>
+</resources>

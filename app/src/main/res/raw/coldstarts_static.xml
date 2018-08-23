@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test>
+    <round>50</round>
+    <cep>TTFF</cep>
+    <longitude>1.0</longitude>
+    <latitude>1.0</latitude>
+    <task>
+        <name>SEND_EXTRA_COMMAND</name>
+        <long>65535</long>
+        <string>delete_aiding_data</string>
+    </task>
+    <task>
+        <name>REQUEST_LOCATION_UPDATES</name>
+        <long>1000</long>
+        <float>0.0</float>
+        <timeout>180000</timeout>
+        <break>true</break>
+    </task>
+    <task>
+        <name>STOP_REQUEST</name>
+    </task>
+    <task>
+        <name>STANDBY</name>
+        <timeout>99999999</timeout>
+        <break>true</break>
+    </task>
+</test>

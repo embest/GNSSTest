@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test>
+    <round>50</round>
+    <task>
+        <name>REQUEST_LOCATION_UPDATES</name>
+        <long>1000</long>
+        <float>0.0</float>
+        <timeout>10000</timeout>
+        <break>true</break>
+    </task>
+    <task>
+        <name>STOP_REQUEST</name>
+        <long>0</long>
+        <float>0.0</float>
+        <timeout>0</timeout>
+        <break>false</break>
+    </task>
+    <task>
+        <name>STANDBY</name>
+        <timeout>5000</timeout>
+        <break>false</break>
+    </task>
+</test>

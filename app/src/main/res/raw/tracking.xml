@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test>
+    <round>1</round>
+    <task>
+        <name>REQUEST_LOCATION_UPDATES</name>
+        <long>1000</long>
+        <float>0.0</float>
+        <timeout>43200000</timeout>
+        <break>false</break>
+    </task>
+</test>

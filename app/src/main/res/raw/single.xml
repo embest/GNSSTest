@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test>
+    <round>10</round>
+    <task>
+        <name>REQUEST_SINGLE_UPDATES</name>
+        <timeout>180000</timeout>
+        <break>false</break>
+    </task>
+    <task>
+        <name>STOP_REQUEST</name>
+    </task>
+    <task>
+        <name>STANDBY</name>
+        <timeout>5000</timeout>
+        <break>false</break>
+    </task>
+</test>
