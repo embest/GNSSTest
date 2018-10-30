@@ -28,6 +28,7 @@ import android.view.View
 import android.graphics.*
 import android.location.GnssStatus
 import android.util.DisplayMetrics
+import kotlin.math.abs
 
 class SkyView : View {
 
@@ -314,7 +315,7 @@ class SkyView : View {
 
                 when (satellite.constellation) {
                     GnssStatus.CONSTELLATION_GPS -> {
-                        if (satellite.frequency ==  GnssSatellite.GPS_L5_FREQUENCY){
+                        if (abs(satellite.frequency - GnssSatellite.GPS_L5_FREQUENCY) < 200.0){
                             bmp =  BitmapFactory.decodeResource(resources, R.drawable.gps_df)
                             gps_df += 1
                         }else {
@@ -327,7 +328,7 @@ class SkyView : View {
                         glo += 1
                     }
                     GnssStatus.CONSTELLATION_QZSS -> {
-                        if (satellite.frequency ==  GnssSatellite.QZSS_L5_FREQUENCY){
+                        if (abs(satellite.frequency - GnssSatellite.QZSS_L5_FREQUENCY) < 200.0){
                             bmp = BitmapFactory.decodeResource(resources, R.drawable.qzss_df)
                             qzss_df += 1
                         }else{
@@ -340,7 +341,7 @@ class SkyView : View {
                         bds += 1
                     }
                     GnssStatus.CONSTELLATION_GALILEO -> {
-                        if (satellite.frequency ==  GnssSatellite.GAL_L5_FREQUENCY){
+                        if (abs(satellite.frequency - GnssSatellite.GAL_L5_FREQUENCY) < 200.0){
                             bmp = BitmapFactory.decodeResource(resources, R.drawable.galileo_df)
                             gal_df += 1
                         }else{

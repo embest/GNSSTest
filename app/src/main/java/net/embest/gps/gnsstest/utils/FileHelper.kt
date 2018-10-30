@@ -87,9 +87,9 @@ class FileHelper {
                             + "ReceivedSvTimeUncertaintyNanos,Cn0DbHz,PseudorangeRateMetersPerSecond,"
                             + "PseudorangeRateUncertaintyMetersPerSecond,"
                             + "AccumulatedDeltaRangeState,AccumulatedDeltaRangeMeters,"
-                            + "AccumulatedDeltaRangeUncertaintyMeters,CarrierFrequencyHz,"
-                            + "MultipathIndicator,SnrInDb,"
-                            + "ConstellationType,AgcDb\r\n"
+                            + "AccumulatedDeltaRangeUncertaintyMeters,CarrierFrequencyHz,CarrierCycles,"
+                            + "CarrierPhase,CarrierPhaseUncertainty,MultipathIndicator,SnrInDb,"
+                            + "ConstellationType,AgcDb,CarrierFrequencyHz\r\n"
                             + "# \r\n")
                     val stream = OutputStreamWriter(FileOutputStream(file, true))
                     stream.write(header)

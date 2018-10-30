@@ -1,0 +1,342 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment"
+    tools:ignore="LabelFor">
+
+    <Spinner
+        android:id="@+id/spinnerJob"
+        android:layout_width="332dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8.0dip"
+        android:background="@android:drawable/btn_dropdown"
+        android:paddingLeft="6.0dip"
+        android:paddingRight="6.0dip"
+        android:textSize="16.0sp" />
+
+    <RelativeLayout
+        android:id="@+id/layoutHomeProfession"
+        android:layout_width="340dp"
+        android:layout_height="168dp"
+        android:layout_above="@id/buttonSave"
+        android:layout_below="@id/spinnerJob"
+        android:layout_marginTop="6dp">
+
+        <EditText
+            android:id="@+id/editTextXml"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="8.0dip"
+            android:layout_marginBottom="8.0dp"
+            android:background="@drawable/bg_edit_text"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="none" />
+    </RelativeLayout>
+
+
+    <TableLayout
+        android:id="@+id/layoutHomeNormal"
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:layout_below="@id/spinnerJob"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="6.0dip"
+        android:paddingRight="6.0dip">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_home_test_round" />
+
+            <EditText
+                android:id="@+id/editTextTestRound"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edit_text"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_test_between" />
+
+            <EditText
+                android:id="@+id/editTextTestBetween"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_edit_text"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_test_timeout" />
+
+            <EditText
+                android:id="@+id/editTextTestTimeout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_edit_text"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip">
+
+            <Switch
+                android:id="@+id/switchTimeout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_run_to_timeout" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1.0"
+                android:background="?android:attr/listDivider" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip">
+
+            <Switch
+                android:id="@+id/switchInjectXtra"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_inject_xtra" />
+
+            <Switch
+                android:id="@+id/switchInjectTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30.0dip"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_inject_time" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/checkBoxDelEph"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_ephemeris"
+                android:textSize="12.0sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDelAlm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_almanac"
+                android:textSize="12.0sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDelPos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_position"
+                android:textSize="12.0sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDelTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_time"
+                android:textSize="12.0sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/checkBoxDelIono"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_iono"
+                android:textSize="12.0sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDelUtc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_utc"
+                android:textSize="12.0sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDelHealth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_health"
+                android:textSize="12.0sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDelSvdir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_svdir"
+                android:textSize="12.0sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/checkBoxDelSvsteer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_svsteer"
+                android:textSize="12.0sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDelSadata"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_sadata"
+                android:textSize="12.0sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDelRti"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_rti"
+                android:textSize="12.0sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDelCell"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_delete_celldb"
+                android:textSize="12.0sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1.0"
+                android:background="?android:attr/listDivider" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_true_latitude" />
+
+            <EditText
+                android:id="@+id/editTextTrueLat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_edit_text"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10.0dip">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/text_home_true_longitude" />
+
+            <EditText
+                android:id="@+id/editTextTrueLon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_edit_text"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="131dp"
+        android:layout_marginBottom="288dp" />
+</RelativeLayout>

@@ -259,6 +259,7 @@ class MainActivity : AppCompatActivity() , HomeFragment.OnFragmentInteractionLis
 
         mRecordFileName = mRecordFileName.replace("-","_")
         mRecordFileName = mRecordFileName.replace(" ", "_")
+        mRecordFileName = mRecordFileName.replace(".", "")
 
         Log.i(TAG, "Name:$mRecordFileName")
     }
@@ -663,7 +664,7 @@ class MainActivity : AppCompatActivity() , HomeFragment.OnFragmentInteractionLis
                 override fun onGnssMeasurementsReceived(event: GnssMeasurementsEvent) {
                     for (meas in event.measurements) {
                         val measurementStream = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                            "Raw,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,\r\n".format(
+                            "Raw,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\r\n".format(
                                     SystemClock.elapsedRealtime(),
                                     event.clock.timeNanos,
                                     event.clock.leapSecond,
@@ -686,12 +687,17 @@ class MainActivity : AppCompatActivity() , HomeFragment.OnFragmentInteractionLis
                                     meas.accumulatedDeltaRangeMeters,
                                     meas.accumulatedDeltaRangeUncertaintyMeters,
                                     meas.carrierFrequencyHz,
+                                    meas.carrierCycles,
+                                    meas.carrierPhase,
+                                    meas.carrierPhaseUncertainty,
                                     meas.multipathIndicator,
                                     meas.snrInDb,
                                     meas.constellationType,
-                                    meas.automaticGainControlLevelDb).replace("NaN","")
+                                    meas.automaticGainControlLevelDb,
+                                    meas.carrierFrequencyHz).replace("NaN","")
+
                         } else {
-                                "Raw,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,\r\n".format(
+                                "Raw,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\r\n".format(
                                         SystemClock.elapsedRealtime(),
                                         event.clock.timeNanos,
                                         event.clock.leapSecond,
@@ -714,11 +720,17 @@ class MainActivity : AppCompatActivity() , HomeFragment.OnFragmentInteractionLis
                                         meas.accumulatedDeltaRangeMeters,
                                         meas.accumulatedDeltaRangeUncertaintyMeters,
                                         meas.carrierFrequencyHz,
+                                        meas.carrierCycles,
+                                        meas.carrierPhase,
+                                        meas.carrierPhaseUncertainty,
                                         meas.multipathIndicator,
                                         meas.snrInDb,
                                         meas.constellationType,
-                                        "").replace("NaN","")
+                                        "",
+                                        meas.carrierFrequencyHz).replace("NaN","")
                         }
+                        Log.e(TAG,"CF:" + meas.carrierFrequencyHz)
+                        Log.e(TAG, measurementStream)
                         if (mPreferences!!.getBoolean("preference_raw_record", true)) {
                             mFile.writeMeasurementFile(mRecordFileName,measurementStream)
                         }

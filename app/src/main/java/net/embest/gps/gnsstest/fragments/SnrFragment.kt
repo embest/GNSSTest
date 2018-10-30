@@ -31,6 +31,7 @@ import android.view.ViewGroup
 import android.widget.*
 
 import java.util.ArrayList
+import kotlin.math.abs
 
 class SnrFragment : Fragment() {
 
@@ -93,7 +94,7 @@ class SnrFragment : Fragment() {
 
             when (satellite.constellation) {
                 GnssStatus.CONSTELLATION_GPS -> {
-                    if (satellite.frequency == GnssSatellite.GPS_L5_FREQUENCY)
+                    if (abs(satellite.frequency - GnssSatellite.GPS_L5_FREQUENCY) < 200.0)
                     {
                         holder.mImgSatFlag!!.setBackgroundResource(R.drawable.gps_df)
                     }else{
@@ -107,7 +108,7 @@ class SnrFragment : Fragment() {
                     holder.mImgSatFlag!!.setBackgroundResource(R.drawable.glonass)
                 }
                 GnssStatus.CONSTELLATION_QZSS -> {
-                    if (satellite.frequency == GnssSatellite.QZSS_L5_FREQUENCY)
+                    if (abs(satellite.frequency - GnssSatellite.QZSS_L5_FREQUENCY) < 200.0)
                     {
                         holder.mImgSatFlag!!.setBackgroundResource(R.drawable.qzss_df)
                     }else {
@@ -118,7 +119,7 @@ class SnrFragment : Fragment() {
                     holder.mImgSatFlag!!.setBackgroundResource(R.drawable.beidou)
                 }
                 GnssStatus.CONSTELLATION_GALILEO -> {
-                    if (satellite.frequency == GnssSatellite.GAL_L5_FREQUENCY)
+                    if (abs(satellite.frequency - GnssSatellite.GAL_L5_FREQUENCY) < 200.0)
                     {
                         holder.mImgSatFlag!!.setBackgroundResource(R.drawable.galileo_df)
                     }else {
