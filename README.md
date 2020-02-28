@@ -11,9 +11,9 @@ GNSSTest is a professional app for the tester, written in Kotlin. It can do most
 - GPS (L1 ![](app/src/main/res/drawable-mdpi/gps.png) L5 ![](app/src/main/res/drawable-mdpi/gps_df.png))
 - GLONASS ![](app/src/main/res/drawable-mdpi/glonass.png)
 - QZSS (L1 ![](app/src/main/res/drawable-mdpi/qzss.png) L5 ![](app/src/main/res/drawable-mdpi/qzss_df.png))
-- BeiDou ![](app/src/main/res/drawable-mdpi/beidou.png)
+- BeiDou (BeiDou-2 ![](app/src/main/res/drawable-mdpi/beidou.png) BeiDou-3(B2A) ![](app/src/main/res/drawable-mdpi/beidou_df.png))
 - Galileo (E1 ![](app/src/main/res/drawable-mdpi/galileo.png) E5 ![](app/src/main/res/drawable-mdpi/galileo_df.png))
-- SBAS ![](app/src/main/res/drawable-mdpi/gps.png)
+- SBAS ![](app/src/main/res/drawable-mdpi/sbas.png)
 - NavIC ![](app/src/main/res/drawable-mdpi/irnss_df.png)
 - Unknown ![](app/src/main/res/drawable-mdpi/un.png)
 
