@@ -102,7 +102,7 @@ class SnrFragment : Fragment() {
                     }
                 }
                 GnssStatus.CONSTELLATION_SBAS -> {
-                    holder.mImgSatFlag!!.setBackgroundResource(R.drawable.gps)
+                    holder.mImgSatFlag!!.setBackgroundResource(R.drawable.sbas)
                 }
                 GnssStatus.CONSTELLATION_GLONASS -> {
                     holder.mImgSatFlag!!.setBackgroundResource(R.drawable.glonass)
@@ -116,7 +116,12 @@ class SnrFragment : Fragment() {
                     }
                 }
                 GnssStatus.CONSTELLATION_BEIDOU -> {
-                    holder.mImgSatFlag!!.setBackgroundResource(R.drawable.beidou)
+                    if (abs(satellite.frequency - GnssSatellite.BDS_L5_FREQUENCY) < 200.0)
+                    {
+                        holder.mImgSatFlag!!.setBackgroundResource(R.drawable.beidou_df)
+                    }else {
+                        holder.mImgSatFlag!!.setBackgroundResource(R.drawable.beidou)
+                    }
                 }
                 GnssStatus.CONSTELLATION_GALILEO -> {
                     if (abs(satellite.frequency - GnssSatellite.GAL_L5_FREQUENCY) < 200.0)

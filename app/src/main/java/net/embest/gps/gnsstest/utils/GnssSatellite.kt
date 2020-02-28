@@ -42,5 +42,6 @@ class GnssSatellite {
         const val GPS_L5_FREQUENCY: Float = 1176450000.0f
         const val QZSS_L5_FREQUENCY: Float = 1176450000.0f
         const val GAL_L5_FREQUENCY: Float = 1176450000.0f
+        const val BDS_L5_FREQUENCY: Float = 1176450000.0f
     }
 }

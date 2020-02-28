@@ -116,52 +116,60 @@ class SkyView : View {
 
         if (isPortrait){
             var satBottom = mCircleY + mRadius + mRadius/12 + 50
-            val div = mRadius/6
+            val div = mRadius/8
 
             val matrix = Matrix()
             matrix.postScale(0.5f, 0.5f)
 
             var bmp = BitmapFactory.decodeResource(resources, R.drawable.gps)
             var bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX - div*5, satBottom, null)
+            canvas.drawBitmap(bitmap, mCircleX - div*6, satBottom, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.galileo)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX - div*3, satBottom, null)
+            canvas.drawBitmap(bitmap, mCircleX - div*4, satBottom, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.qzss)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX - div*1, satBottom, null)
-
-            bmp = BitmapFactory.decodeResource(resources, R.drawable.glonass)
-            bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX + div*1, satBottom, null)
+            canvas.drawBitmap(bitmap, mCircleX - div*2, satBottom, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.beidou)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX + div*3, satBottom, null)
+            canvas.drawBitmap(bitmap, mCircleX + div*0, satBottom, null)
+
+            bmp = BitmapFactory.decodeResource(resources, R.drawable.glonass)
+            bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
+            canvas.drawBitmap(bitmap, mCircleX + div*2, satBottom, null)
+
+            bmp = BitmapFactory.decodeResource(resources, R.drawable.sbas)
+            bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
+            canvas.drawBitmap(bitmap, mCircleX + div*4, satBottom, null)
 
             satBottom = mCircleY + mRadius + mRadius/12 + 150
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.gps_df)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX - div*5, satBottom, null)
+            canvas.drawBitmap(bitmap, mCircleX - div*6, satBottom, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.galileo_df)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX - div*3, satBottom, null)
+            canvas.drawBitmap(bitmap, mCircleX - div*4, satBottom, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.qzss_df)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX - div*1, satBottom, null)
+            canvas.drawBitmap(bitmap, mCircleX - div*2, satBottom, null)
+
+            bmp = BitmapFactory.decodeResource(resources, R.drawable.beidou_df)
+            bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
+            canvas.drawBitmap(bitmap, mCircleX - div*0, satBottom, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.irnss_df)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX + div*1, satBottom, null)
+            canvas.drawBitmap(bitmap, mCircleX + div*2, satBottom, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.un)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, mCircleX + div*3, satBottom, null)
+            canvas.drawBitmap(bitmap, mCircleX + div*4, satBottom, null)
 
 
 
@@ -192,53 +200,62 @@ class SkyView : View {
         }
         else{
             var satLeft = mCircleX + mRadius + mRadius/12 + 150
-            val div = mRadius/6
+            val div = mRadius/8
 
             val matrix = Matrix()
             matrix.postScale(0.5f, 0.5f)
 
             var bmp = BitmapFactory.decodeResource(resources, R.drawable.gps)
             var bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*4, null)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*5, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.galileo)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*2, null)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*3, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.qzss)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*0, null)
-
-            bmp = BitmapFactory.decodeResource(resources, R.drawable.glonass)
-            bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*2, null)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*1, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.beidou)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*4, null)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*1, null)
+
+            bmp = BitmapFactory.decodeResource(resources, R.drawable.glonass)
+            bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*3, null)
+
+
+            bmp = BitmapFactory.decodeResource(resources, R.drawable.sbas)
+            bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*5, null)
 
 
             satLeft += 300
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.gps_df)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*4, null)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*5, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.galileo_df)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*2, null)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*3, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.qzss_df)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*0, null)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY-div*1, null)
+
+            bmp = BitmapFactory.decodeResource(resources, R.drawable.beidou_df)
+            bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*1, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.irnss_df)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*2, null)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*3, null)
 
             bmp = BitmapFactory.decodeResource(resources, R.drawable.un)
             bitmap = Bitmap.createBitmap(bmp, 0, 0, bmp.width, bmp.height, matrix, true)
-            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*4, null)
+            canvas.drawBitmap(bitmap, satLeft, mCircleY+div*5, null)
 
             var snrLeft = satLeft + 400
             val snrY = mCircleY/4
@@ -293,10 +310,12 @@ class SkyView : View {
             var qzss = 0
             var bds = 0
             var gal = 0
+            var sbas = 0
 
             var gps_df = 0
             var irnss = 0
             var qzss_df = 0
+            var bds_df = 0
             var un = 0
             var gal_df = 0
 
@@ -327,6 +346,10 @@ class SkyView : View {
                         bmp = BitmapFactory.decodeResource(resources, R.drawable.glonass)
                         glo += 1
                     }
+                    GnssStatus.CONSTELLATION_SBAS -> {
+                        bmp = BitmapFactory.decodeResource(resources, R.drawable.sbas)
+                        sbas += 1
+                    }
                     GnssStatus.CONSTELLATION_QZSS -> {
                         if (abs(satellite.frequency - GnssSatellite.QZSS_L5_FREQUENCY) < 200.0){
                             bmp = BitmapFactory.decodeResource(resources, R.drawable.qzss_df)
@@ -337,8 +360,14 @@ class SkyView : View {
                         }
                     }
                     GnssStatus.CONSTELLATION_BEIDOU -> {
-                        bmp = BitmapFactory.decodeResource(resources, R.drawable.beidou)
-                        bds += 1
+                        if (abs(satellite.frequency - GnssSatellite.BDS_L5_FREQUENCY) < 200.0) {
+                            bmp = BitmapFactory.decodeResource(resources, R.drawable.beidou_df)
+                            bds_df += 1
+                        } else {
+                            bmp = BitmapFactory.decodeResource(resources, R.drawable.beidou)
+                            bds += 1
+
+                        }
                     }
                     GnssStatus.CONSTELLATION_GALILEO -> {
                         if (abs(satellite.frequency - GnssSatellite.GAL_L5_FREQUENCY) < 200.0){
@@ -378,21 +407,24 @@ class SkyView : View {
                 canvas.drawText(satellites.size.toString(), mCircleX-(mRadius/8)*7, infoBottom - 50, paint)
                 canvas.drawText(inUse.toString(), mCircleX+(mRadius/8)*6, infoBottom - 50, paint)
 
-                var satBottom = mCircleY + mRadius + mRadius/6 + mRadius/12
-                val div = mRadius/6
-                paint.textSize = mRadius/12
-                canvas.drawText(gps.toString(),  mCircleX - div*4, satBottom, paint)
-                canvas.drawText(gal.toString(),  mCircleX - div*2, satBottom, paint)
-                canvas.drawText(qzss.toString(), mCircleX - div*0, satBottom, paint)
-                canvas.drawText(glo.toString(),  mCircleX + div*2, satBottom, paint)
-                canvas.drawText(bds.toString(),  mCircleX + div*4, satBottom, paint)
+                var satBottom = mCircleY + mRadius + mRadius/6 + mRadius/12 + 5
+                val div = mRadius/8
+                paint.textSize = mRadius/14
+                canvas.drawText(gps.toString(),  mCircleX - div*5, satBottom, paint)
+                canvas.drawText(gal.toString(),  mCircleX - div*3, satBottom, paint)
+                canvas.drawText(qzss.toString(), mCircleX - div*1, satBottom, paint)
+                canvas.drawText(bds.toString(),  mCircleX + div*1, satBottom, paint)
+                canvas.drawText(glo.toString(),  mCircleX + div*3, satBottom, paint)
+                canvas.drawText(sbas.toString(), mCircleX + div*5, satBottom, paint)
+
 
                 satBottom += 100
-                canvas.drawText(gps_df.toString(),  mCircleX - div*4, satBottom, paint)
-                canvas.drawText(gal_df.toString(),  mCircleX - div*2, satBottom, paint)
-                canvas.drawText(qzss_df.toString(), mCircleX - div*0, satBottom, paint)
-                canvas.drawText(irnss.toString(),   mCircleX + div*2, satBottom, paint)
-                canvas.drawText(un.toString(),      mCircleX + div*4, satBottom, paint)
+                canvas.drawText(gps_df.toString(),  mCircleX - div*5, satBottom, paint)
+                canvas.drawText(gal_df.toString(),  mCircleX - div*3, satBottom, paint)
+                canvas.drawText(qzss_df.toString(), mCircleX - div*1, satBottom, paint)
+                canvas.drawText(bds_df.toString(),  mCircleX + div*1, satBottom, paint)
+                canvas.drawText(irnss.toString(),   mCircleX + div*3, satBottom, paint)
+                canvas.drawText(un.toString(),      mCircleX + div*5, satBottom, paint)
             }
             else{
                 val infoBottom = mCircleY + mRadius
@@ -403,21 +435,23 @@ class SkyView : View {
                 canvas.drawText(inUse.toString(), mCircleX+(mRadius/8)*6, infoBottom - 50, paint)
 
                 var satLeft = mCircleX + mRadius + mRadius/12 + 300
-                val div = mRadius/6
+                val div = mRadius/8
                 paint.textSize = mRadius/8
-                canvas.drawText(gps.toString(),  satLeft,  mCircleY-div*4+mRadius/8, paint)
-                canvas.drawText(gal.toString(),  satLeft,  mCircleY-div*2+mRadius/8, paint)
-                canvas.drawText(qzss.toString(), satLeft,  mCircleY-div*0+mRadius/8, paint)
-                canvas.drawText(glo.toString(),  satLeft,  mCircleY+div*2+mRadius/8, paint)
-                canvas.drawText(bds.toString(),  satLeft,  mCircleY+div*4+mRadius/8, paint)
+                canvas.drawText(gps.toString(),  satLeft,  mCircleY-div*5+mRadius/8, paint)
+                canvas.drawText(gal.toString(),  satLeft,  mCircleY-div*3+mRadius/8, paint)
+                canvas.drawText(qzss.toString(), satLeft,  mCircleY-div*1+mRadius/8, paint)
+                canvas.drawText(bds.toString(),  satLeft,  mCircleY+div*1+mRadius/8, paint)
+                canvas.drawText(glo.toString(),  satLeft,  mCircleY+div*3+mRadius/8, paint)
+                canvas.drawText(sbas.toString(), satLeft,  mCircleY+div*5+mRadius/8, paint)
 
 
                 satLeft += 300
-                canvas.drawText(gps_df.toString(),  satLeft,  mCircleY-div*4+mRadius/8, paint)
-                canvas.drawText(gal_df.toString(),  satLeft,  mCircleY-div*2+mRadius/8, paint)
-                canvas.drawText(qzss_df.toString(), satLeft,  mCircleY-div*0+mRadius/8, paint)
-                canvas.drawText(irnss.toString(),   satLeft,  mCircleY+div*2+mRadius/8, paint)
-                canvas.drawText(un.toString(),      satLeft,  mCircleY+div*4+mRadius/8, paint)
+                canvas.drawText(gps_df.toString(),  satLeft,  mCircleY-div*5+mRadius/8, paint)
+                canvas.drawText(gal_df.toString(),  satLeft,  mCircleY-div*3+mRadius/8, paint)
+                canvas.drawText(qzss_df.toString(), satLeft,  mCircleY-div*1+mRadius/8, paint)
+                canvas.drawText(bds_df.toString(),  satLeft,  mCircleY+div*1+mRadius/8, paint)
+                canvas.drawText(irnss.toString(),   satLeft,  mCircleY+div*3+mRadius/8, paint)
+                canvas.drawText(un.toString(),      satLeft,  mCircleY+div*5+mRadius/8, paint)
             }
         }
     }

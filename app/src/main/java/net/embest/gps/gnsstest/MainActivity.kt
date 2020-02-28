@@ -627,7 +627,7 @@ class MainActivity : AppCompatActivity() , HomeFragment.OnFragmentInteractionLis
                                     }
                                 }
 
-                                Log.e(TAG, "SAT:${satellite.svid} Type:${satellite.constellation} is:${satellite.frequency}")
+                                Log.e(TAG, "SAT:${satellite.svid} Type:${satellite.constellation} CF:${satellite.frequency}")
                             }
                             mGnssInfo!!.addSatellite(satellite)
                             view++
