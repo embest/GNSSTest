@@ -10,8 +10,8 @@ android {
         applicationId "net.embest.gps.gnsstest"
         minSdkVersion 24
         targetSdkVersion 28
-        versionCode 5
-        versionName "3.0.1"
+        versionCode 6
+        versionName "3.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
